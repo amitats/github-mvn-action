@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-	    - main
+      - main
   pull_request:
       types: [opened, synchronize, reopened]
 
@@ -23,5 +23,5 @@ jobs:
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
-		    projectKey: "Github-Action-Scan"
-		    run: mvn clean verify sonar:sonar -Dsonar.projectKey=Github-Action-Scan -Dsonar.host.url=http://18.198.202.120:9000 -Dsonar.login=sqp_0ea717413f11eb509dc45687430af3e74a4c2da9
+	projectKey: "Github-Action-Scan"
+	run: mvn clean verify sonar:sonar -Dsonar.projectKey=Github-Action-Scan -Dsonar.host.url=http://18.198.202.120:9000 -Dsonar.login=sqp_0ea717413f11eb509dc45687430af3e74a4c2da9
