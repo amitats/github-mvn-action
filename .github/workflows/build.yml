@@ -3,11 +3,9 @@ on:
   # a pull request. 
   push:
     branches:
-      - master
       - main
   pull_request:
       types: [opened, synchronize, reopened]
-
 name: SonarQube Scan
 jobs:
   sonarqube:
